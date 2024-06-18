@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Vehículos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Lista de Vehículos</h3>
+        <table class="table table-bordered">
+            
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Color</th>
+                    <th>Precio</th>
+                    <th>Tipo de Vehículo</th>
+                    <th>Concesionaria</th>
+                    <th>Imagen</th>
+                </tr>
+            
+            
+                <tr th:each="vehiculo : ${vehiculos}">
+                    <td th:text="${vehiculo.marca}"></td>
+                    <td th:text="${vehiculo.modelo}"></td>
+                    <td th:text="${vehiculo.año}"></td>
+                    <td th:text="${vehiculo.color}"></td>
+                    <td th:text="${vehiculo.precio}"></td>
+                    <td th:text="${vehiculo.tipo_vehiculo}"></td>
+                    <td th:text="${vehiculo.consesionaria}"></td>
+                    <td th:text="${vehiculo.imagen}"></td>
+                </tr>
+            
+        </table>
+    </div>
+</body>
+</html>
